@@ -1,0 +1,17 @@
+@startuml
+
+Moniter --* Computer
+Mouse --* Computer
+
+class Computer{
+- mouse:Mouse=new Mouse();
+- moniter:Moniter=new Moniter();
+}
+class Moniter{
+
+}
+class Mouse{
+
+}
+
+@enduml

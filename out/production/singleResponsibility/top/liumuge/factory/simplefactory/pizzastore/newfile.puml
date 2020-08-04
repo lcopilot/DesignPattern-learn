@@ -1,0 +1,24 @@
+@startuml
+
+ChessPizza --|> Pizza
+GreekPizza --|> Pizza
+OrderPizza o-- SimpleFactory
+OrderPizza2 o-- SimpleFactory
+OrderPizza3 o-- SimpleFactory
+
+
+
+class Pizza{
++ prepare():void
++ bake():void
++ cut():void
++ box():void
+}
+class ChessPizza
+class GreekPizza
+class OrderPizza
+class OrderPizza3
+class OrderPizza3
+class SimpleFactory
+
+@enduml

@@ -1,0 +1,31 @@
+@startuml
+
+BJChessPizza --|>Pizza
+BJGreekPizza --|>Pizza
+LDChessPizza --|>Pizza
+LDGreekPizza --|>Pizza
+BJOrderPizza --|>OrderPizza
+LDOrderPizza --|>OrderPizza
+BJOrderPizza -->BJGreekPizza
+BJOrderPizza -->BJChessPizza
+LDOrderPizza -->LDChessPizza
+LDOrderPizza -->LDGreekPizza
+
+class Pizza{
++ prepare():void
++ bake():void
++ cut():void
++ box():void
+}
+class BJChessPizza
+class BJGreekPizza
+class LDChessPizza
+class LDGreekPizza
+class OrderPizza{
++ createPizza():Pizza
+}
+class BJOrderPizza
+class LDOrderPizza
+
+
+@enduml

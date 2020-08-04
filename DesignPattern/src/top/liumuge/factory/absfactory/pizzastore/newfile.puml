@@ -1,0 +1,33 @@
+@startuml
+
+BJChessPizza --|>Pizza
+BJPepperPizza --|>Pizza
+LDChessPizza --|>Pizza
+LDPepperPizza --|>Pizza
+BJFactory ..|> AbsFactory
+LDFactory ..|> AbsFactory
+OrderPizza o-- AbsFactory
+OrderPizza2 o-- AbsFactory
+BJFactory --> BJChessPizza
+BJFactory --> BJPepperPizza
+LDFactory --> LDChessPizza
+LDFactory --> LDPepperPizza
+
+
+class Pizza{
++ prepare():void
++ bake():void
++ cut():void
++ box():void
+}
+class BJChessPizza
+class BJPepperPizza
+class LDChessPizza
+class LDPepperPizza
+interface AbsFactory
+class BJFactory
+class LDFactory
+class OrderPizza
+class OrderPizza2
+
+@enduml

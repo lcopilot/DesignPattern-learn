@@ -1,0 +1,22 @@
+@startuml
+
+House--*HouseBuilder
+CommonHouseBuilder --|>HouseBuilder
+HighHouseBuilder --|>HouseBuilder
+HouseBuilder --o HouseDirector
+
+class House
+class HouseBuilder{
+- house:House=new House()
++ buildBasic():void
++ buildWalls():void
++ roofed():void
++ build():House
+}
+class CommonHouseBuilder
+class HighHouseBuilder
+class HouseDirector{
+- houseBuilder:HouseBuilder
+}
+
+@enduml

@@ -1,0 +1,14 @@
+@startuml
+
+
+'实现关系实际上就是 PersonServiceBean类 实现 PersonService接口，依赖关系的特例。'
+
+PersonServiceBean..|>PersonService
+
+interface PersonService{
++ delete(id:Integer):void
+}
+class PersonServiceBean{
++ delete(id:Integer):void
+}
+@enduml

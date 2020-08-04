@@ -1,0 +1,28 @@
+@startuml
+
+'依赖关系'
+
+PersonServiceBean...>IDCard
+PersonServiceBean...>Person
+PersonServiceBean...>PersonDao
+PersonServiceBean...>Department
+
+class IDCard{
+
+}
+class Person{
+}
+
+class PersonDao{
+}
+
+class Department{
+}
+class PersonServiceBean{
+- personDao:PersonDao
++ save(person:Person):void
++ getIDCard(personid:Integer):IDCard
++ modify():void
+}
+
+@enduml

@@ -1,0 +1,14 @@
+@startuml
+
+CommonHouse--|>AbstractHouse
+HighBuilding--|>AbstractHouse
+
+abstract class AbstractHouse{
++ buildBasic():void
++ buildWalls():void
++ roofed():void
++ build():void
+}
+class CommonHouse
+class HighBuilding
+@enduml

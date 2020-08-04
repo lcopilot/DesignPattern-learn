@@ -1,0 +1,13 @@
+@startuml
+
+AbsA--|>interface4
+
+interface interface4{
++ operation1():void
++ operation2():void
++ operation3():void
++ operation4():void
+}
+abstract class AbsA
+
+@enduml

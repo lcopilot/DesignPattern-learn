@@ -1,0 +1,13 @@
+@startuml
+
+'泛化关系实际上就是继承关系，依赖关系的特例。'
+PersonServiceBean--|>DaoSupport
+
+abstract class DaoSupport{
++ save(entity:Object):void
++ delete(id:Object):void
+}
+
+class PersonServiceBean{
+}
+@enduml

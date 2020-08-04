@@ -1,0 +1,10 @@
+@startuml
+
+class person{
+-Integer id
+-String name
++setName()
++getName()
+}
+
+@enduml
